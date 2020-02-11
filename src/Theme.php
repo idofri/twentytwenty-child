@@ -8,9 +8,17 @@ class Theme {
 	use Singleton;
 
 	protected function __construct() {
+		add_action( 'wp_head', [ $this, 'mobileAddressBarColor' ], 1 );
 		add_action( 'after_switch_theme', [ $this, 'createWpTestUser' ] );
 		add_action( 'wp_enqueue_scripts', [ $this, 'frontEnqueueStyles' ] );
 		add_filter( 'show_admin_bar', [ $this, 'wpTestDisableAdminBar' ] );
+	}
+
+	public function mobileAddressBarColor(): void {
+		$addressBarColor = get_theme_mod( 'address_bar_color' );
+		if ( $addressBarColor ) {
+			echo "<meta name='theme-color' content='{$addressBarColor}' />\n";
+		}
 	}
 
 	public function createWpTestUser() {

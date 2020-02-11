@@ -6,6 +6,7 @@ namespace TwentyTwenty {
 
 	Theme::instance();
 	Product::instance();
+	Customizer::instance();
 };
 
 namespace {

@@ -164,6 +164,6 @@ class Product {
 		require locate_template( 'template-parts/loop-product.php' );
 		wp_reset_postdata();
 
-		return ob_get_clean();
+		return apply_filters( 'twentytwenty_product_loop_html', ob_get_clean(), $post, $atts );
 	}
 }
