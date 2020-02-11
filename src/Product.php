@@ -23,6 +23,7 @@ class Product {
 
 		add_shortcode( self::POST_TYPE, [ $this, 'renderShortcode' ] );
 
+		Rest::instance();
 		Gallery::instance();
 		Attributes::instance();
 	}
