@@ -8,3 +8,22 @@
  License URI:  http://www.gnu.org/licenses/gpl-3.0.html
  Text Domain:  twentytwenty-child
 */
+
+.box-row {
+    position: relative;
+    border: 1px solid grey;
+}
+
+.box-row .on-sale {
+    position: absolute;
+    padding: 5px 10px;
+    background-color: salmon;
+    color: #fff;
+    right: 0;
+    top: 0;
+}
+
+.box-row h3 {
+    font-size: 1.6em;
+    margin: 1rem auto !important;
+}

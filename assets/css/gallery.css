@@ -1,0 +1,37 @@
+#product-gallery .inside {
+    margin: 0;
+    padding: 0;
+}
+
+#product-gallery .inside #product_images_container {
+    padding: 0 0 0 16px;
+}
+
+#product-gallery .inside .add_product_images {
+    padding: 16px;
+}
+
+#product-gallery ul {
+    margin: 0;
+    padding: 0;
+}
+
+#product-gallery ul:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+#product-gallery ul li {
+    width: 70px;
+    float: left;
+    margin: 9px 9px 0 0;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#product-gallery ul li img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
